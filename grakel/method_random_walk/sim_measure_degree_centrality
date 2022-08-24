@@ -1,0 +1,29 @@
+
+# given the random walks, calc the similarity
+
+# given rand walks, calc similarity
+
+# sim measure
+def sim_measure_degree_centrality(walk1, walk2, G1, G2):
+   
+    dcent1 = nx.degree_centrality(G1)
+   
+    dcent2 = nx.degree_centrality(G2)
+   
+    # find the vertices that were traversed
+    scores1 = []
+    for v1 in walk1:
+        c1 = dcent1[v1]
+        scores1.append(c1)
+       
+    scores2 = []
+    for v2 in walk2:
+        c2 = dcent2[v2]
+        scores2.append(c2)
+       
+    # compare scores
+    k = len(walk1)
+    for i in range(k):
+        diff= abs(scores1[i] - scores2[i])
+   
+    return diff, scores1, scores2
