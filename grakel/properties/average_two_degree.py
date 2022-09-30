@@ -26,6 +26,15 @@ def average_two_degree(A,i, deg): # deg holds the degrees of vertices
 
     den = deg[i]
     return (num)/(den)
+
+ # take av 2 degree of each vertex
+def average_2_degree_vector(A, deg):
+    n = len(A)
+    vec = []
+    for i in range(n):
+        vec.append(average_two_degree, i, deg)
+    
+    return vec
   
 # average 2 transmission of vertex v_i and the signless Laplacian average 2-transmission 
 
