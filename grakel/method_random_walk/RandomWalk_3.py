@@ -1,8 +1,11 @@
 # October 2022
 # rw 3 : combine initialize and custom_initialize_parse
 
+# rw 3 : combine initialize and custom_initialize_parse
+
 
 from grakel.kernels import Kernel
+from six.moves.collections_abc import Iterable
 
 import networkx as nx
 
@@ -22,7 +25,7 @@ def weights(A, q, beta):
     w = np.zeros((n,n))
     for i in range(n):
         for j in range(n):
-            w[i,j] = np.pow(q[i]*q[j], beta)*A[i,j]
+            w[i,j] = np.power(q[i]*q[j], beta)*A[i,j]
     
     return w
 
@@ -139,6 +142,13 @@ class RandomWalk3(Kernel):
         # set the networkx graph and other parameters
         g1 = nx.Graph()
         
+        
+        if len(X) == 1:
+            
+            print("len X is 1")
+            print("X is ", X)
+            #A = X.get_adjacency_matrix()
+        
         for (idx, x) in enumerate(iter(X)):
 
             A = x.get_adjacency_matrix()
@@ -146,7 +156,7 @@ class RandomWalk3(Kernel):
             # test this by printing
             print("parse input A is:", A)
 
-            is_iter = isinstance(x, collections.Iterable)
+            is_iter = isinstance(x, Iterable)
             
             # custom init
             n = len(A)
