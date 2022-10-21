@@ -1,8 +1,6 @@
 # October 2022
 # rw 3 : combine initialize and custom_initialize_parse
 
-# rw 3 : combine initialize and custom_initialize_parse
-
 
 from grakel.kernels import Kernel
 from six.moves.collections_abc import Iterable
@@ -88,7 +86,7 @@ def compute_walk(self, X, Y):
 class RandomWalk3(Kernel):
     
     def __init__(self, n_jobs=None,
-                 normalize=False, verbose=False,
+                 normalize=True, verbose=False,
                  lamda=0.1, beta=2, method_type="fast",
                  kernel_type="geometric", p=10):
         """Initialise a random_walk kernel."""
