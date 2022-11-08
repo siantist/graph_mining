@@ -1,3 +1,11 @@
+# compute vector q:
+def compute_q(G):
+    # use nx
+    q= nx.degree_centrality(G)
+    
+    # use custom function here : 
+    
+    return q
 
 # define the weight, given input vector q (quantity assoc to node i)
 
