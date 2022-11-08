@@ -62,55 +62,90 @@ class RandomWalk5(Kernel):
         
         i = 0
         out = list()
-        print("X is", X)
+        #print("X is", X)
         
         # set the networkx graph and other parameters
         g1 = nx.Graph()
         
         
-        if len(X) == 1:
+        """if len(X) == 1:
+            X = X[0]
             
             print("len X is 1")
-            #print("X is ", X)
-            #A = X.get_adjacency_matrix()
+            print("X is ", X)
+            A = X.get_adjacency_matrix()"""
+        is_iter = isinstance(X, Iterable)
         
-        for (idx, x) in enumerate(iter(X)):
-
-            A = x.get_adjacency_matrix()
-            
-            # test this by printing
-            #print("parse input A is:", A) Note: PRinted this Before!
-
-            is_iter = isinstance(x, Iterable)
-            
-            # custom init
+        
+        print("is iter :", is_iter)
+        
+        if not is_iter:
+            A = X.get_adjacency_matrix()
             n = len(A)
-            
+
             nodes= np.arange(n)
             g1.add_nodes_from(nodes)
-            
+
             edge_list = edges_from_adjacency(A)
             self.edge_list = edge_list
 
             g1.add_edges_from(edge_list) # [(2,3),(1,3), (3,4), (3,5)])
-            
+
             q = compute_q(g1) # from nx
-            
+
             self.weight_vec = weights(A, q, self.beta)
-        
+
             self.networkx_graph = g1
             self.numnodes = n
-
-            # end custom init
             
-            if is_iter:
-                x = list(x)
-            else:
-                #A = Graph(x[0], {}, {}, self._graph_format).get_adjacency_matrix()
-                pass
+            
+        if is_iter:
+            for (idx, x) in enumerate(iter(X)): # only parse 0-th element (others are labels)
 
-            i += 1
-            out.append(self.add_input_(A))
+                #print(x)
+
+                x_is_iter = isinstance(x, Iterable)
+                
+                if x_is_iter:
+                    x = list(x)
+                    A = grakel.Graph(x[0], {}, {}).get_adjacency_matrix()
+
+                #gx = grakel.Graph(x)
+                #A = gx.get_adjacency_matrix()
+
+                # test this by printing
+                #print("parse input A is:", A) Note: PRinted this Before!
+
+
+                A = x.get_adjacency_matrix()
+                # custom init
+                n = len(A)
+
+                nodes= np.arange(n)
+                g1.add_nodes_from(nodes)
+
+                edge_list = edges_from_adjacency(A)
+                self.edge_list = edge_list
+
+                g1.add_edges_from(edge_list) # [(2,3),(1,3), (3,4), (3,5)])
+
+                q = compute_q(g1) # from nx
+
+                self.weight_vec = weights(A, q, self.beta)
+
+                self.networkx_graph = g1
+                self.numnodes = n
+
+                # end custom init
+
+                """if is_iter:
+                    x = list(x)
+                else:
+                    #A = Graph(x[0], {}, {}, self._graph_format).get_adjacency_matrix()
+                    pass"""
+
+                i += 1
+                out.append(self.add_input_(A))
         
         
         
@@ -120,6 +155,8 @@ class RandomWalk5(Kernel):
     
     
     def pairwise_operation(self, X, Y):
+        
+        print("pairwise op rw5")
         
         XY = np.kron(X, Y)
     
@@ -145,5 +182,5 @@ class RandomWalk5(Kernel):
         if self.kernel_type == "geometric":
             S = inv(np.identity(s) - self.lamda*XY).T
             
-
+        print("S sum is", np.sum(S))
         return np.sum(S)
