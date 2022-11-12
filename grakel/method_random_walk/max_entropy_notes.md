@@ -6,3 +6,4 @@ links:
 https://mathweb.ucsd.edu/~fan/research/cb/ch1.pdf
 
 pg 16 can modify the weights and improve convergence bound
+pg 12 For function $f: V \rightarrow R$, we have $ L f(x) = \sum_{ y, x ~y } ( f(x) - f(y) ) w(x,y)$
