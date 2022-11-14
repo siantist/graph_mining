@@ -7,3 +7,14 @@ To Do:
  - tu dataset , test with randomwalk3 or randomwalk4 
 
 - graph kernel score in GNN
+
+
+Notes on grakel:
+
+https://ysig.github.io/GraKeL/0.1a8/documentation/core_concepts.html
+
+fit method extracts kernel dependent features from an input graph collection.
+
+The fit_transform method does the same job as fit, but also computes the kernel matrix emerging from the input graph collection.
+
+The transform method calculates the kernel matrix between a new collection of graphs and the one given as input to fit or to fit_transform.
