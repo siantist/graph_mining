@@ -5,3 +5,5 @@ To try out:
 
 To Do:
  - tu dataset , test with randomwalk3 or randomwalk4 
+
+- graph kernel score in GNN
