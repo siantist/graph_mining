@@ -22,3 +22,4 @@ https://ysig.github.io/GraKeL/0.1a8/documentation/core_concepts.html
 
 https://github.com/ysig/GraKeL/blob/master/grakel/graph_kernels.py. (has transform, fit transform, fit functions)
 
+https://github.com/ysig/GraKeL/blob/master/grakel/utils.py
