@@ -17,4 +17,8 @@ The transform method calculates the kernel matrix between a new collection of gr
 The diagonal method is used for normalizing kernel matrices. It returns the self-kernel values of all the graphs given as input to fit along with those given as input to transform, provided that this method has been called.
 
 The pairwise_operation method computes the kernel between two graphs. This method is used by the calculate_kernel_matrix method which generates kernel matrices from collections of graphs.
+
 https://ysig.github.io/GraKeL/0.1a8/documentation/core_concepts.html
+
+https://github.com/ysig/GraKeL/blob/master/grakel/graph_kernels.py. (has transform function)
+
