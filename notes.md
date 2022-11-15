@@ -20,5 +20,5 @@ The pairwise_operation method computes the kernel between two graphs. This metho
 
 https://ysig.github.io/GraKeL/0.1a8/documentation/core_concepts.html
 
-https://github.com/ysig/GraKeL/blob/master/grakel/graph_kernels.py. (has transform function)
+https://github.com/ysig/GraKeL/blob/master/grakel/graph_kernels.py. (has transform, fit transform, fit functions)
 
