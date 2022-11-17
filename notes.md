@@ -13,6 +13,7 @@ The fit method extracts kernel dependent features from an input graph collection
 The fit_transform method does the same job as fit, but also computes the kernel matrix emerging from the input graph collection.
 
 The transform method calculates the kernel matrix between a new collection of graphs and the one given as input to fit or to fit_transform.
+It calls the parse input on Y and then calls the calculate_kernel_matrix which calls the pairwise operation function.
 
 The diagonal method is used for normalizing kernel matrices. It returns the self-kernel values of all the graphs given as input to fit along with those given as input to transform, provided that this method has been called.
 
