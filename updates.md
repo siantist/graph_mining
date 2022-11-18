@@ -8,6 +8,7 @@ To Do:
 
 - graph kernel score in GNN
 
+- code the algorithm https://arxiv.org/pdf/1904.13169.pdf with graphblas
 
 Notes on grakel:
 
