@@ -13,7 +13,7 @@ class RandomWalk5(Kernel):
     def __init__(self, n_jobs=None,
                  normalize=True, verbose=False,
                  lamda=0.1, beta=2, method_type="fast",
-                 kernel_type="geometric", p=10):
+                 kernel_type="normal", p=10):
         """Initialise a random_walk kernel."""
         
         super(RandomWalk5, self).__init__(
@@ -34,7 +34,7 @@ class RandomWalk5(Kernel):
         
         self.edge_list =[]
         
-        self.weight_vec = []
+        self.weight_mat = []
         
         print("init")
     
@@ -78,6 +78,7 @@ class RandomWalk5(Kernel):
         
         
         print("is iter :", is_iter)
+        print("parse input called ")
         
         if not is_iter:
             A = X.get_adjacency_matrix()
@@ -93,7 +94,7 @@ class RandomWalk5(Kernel):
 
             q = compute_q(g1) # from nx
 
-            self.weight_vec = weights(A, q, self.beta)
+            self.weight_mat = weights(A, q, self.beta)
 
             self.networkx_graph = g1
             self.numnodes = n
@@ -130,8 +131,8 @@ class RandomWalk5(Kernel):
                 g1.add_edges_from(edge_list) # [(2,3),(1,3), (3,4), (3,5)])
 
                 q = compute_q(g1) # from nx
-
-                self.weight_vec = weights(A, q, self.beta)
+ 
+                self.weight_mat = weights(A, q, self.beta) # it's not a vector, it's a matrix
 
                 self.networkx_graph = g1
                 self.numnodes = n
@@ -145,11 +146,13 @@ class RandomWalk5(Kernel):
                     pass"""
 
                 i += 1
-                out.append(self.add_input_(A))
+                
+                # change the out 
+                out.append(self.weight_vec) # A, (self.add_input_(A))
         
         
         
-        
+        print("out")
         
         return out
     
@@ -157,8 +160,13 @@ class RandomWalk5(Kernel):
     def pairwise_operation(self, X, Y):
         
         print("pairwise op rw5")
+        #print(" Y is ", Y) # matrix of 0 and 1's 
         
         XY = np.kron(X, Y)
+        
+        print("XY is", XY)
+        
+        booly = (XY == Y)
     
         # p = number of steps 
         if self.p:
