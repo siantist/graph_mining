@@ -148,7 +148,7 @@ class RandomWalk5(Kernel):
                 i += 1
                 
                 # change the out 
-                out.append(self.weight_vec) # A, (self.add_input_(A))
+                out.append(self.weight_mat) # A, (self.add_input_(A))
         
         
         
