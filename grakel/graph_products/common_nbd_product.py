@@ -9,9 +9,10 @@ def common_nbd_product(A, B, v_labels1, v_labels2):
     inverse_vertices1x2= {}
     ind=0
     
-    edges_a = edge_from_adjacency(A)
-    edges_b = edge_from_adjacency(B)
+    edges_a = edges_from_adjacency(A)
+    edges_b = edges_from_adjacency(B)
     edges_c = []
+    edges_c_ind = []
     
     v1 = 0
     for lab1 in v_labels1:
@@ -73,6 +74,11 @@ def common_nbd_product(A, B, v_labels1, v_labels2):
             if (a,c) in edges_a:
                 if (b,d) in edges_b: # if b,d in E(H)
                     edges_c.append((a,c), (b,d))
+                    
+                    i1 = inverse_vertices1x2[(a,c)]
+                    i2 = inverse_vertices1x2[(b,d)] 
+                    
+                    edges_c_ind.append((i1,i2))
             
         
         
