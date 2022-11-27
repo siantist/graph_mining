@@ -12,7 +12,7 @@ class RandomWalk6(Kernel):
 
     _graph_format = "adjacency"
 
-    def __init__(self, n_jobs=None,
+    def __init__(self, n_jobs=None, beta=2,
                  normalize=True, verbose=False,
                  lamda=0.1, method_type="fast",
                  kernel_type="baseline", p=None):
@@ -51,6 +51,7 @@ class RandomWalk6(Kernel):
                      and self.p is None
                      and self.kernel_type == "geometric")):
                 self.add_input_ = idem
+            """
             elif self.method_type == "fast":
                 # Spectral Decomposition if adjacency matrix is symmetric
                 self.add_input_ = sd
@@ -62,7 +63,9 @@ class RandomWalk6(Kernel):
             if self.kernel_type not in ["geometric", "exponential"]:
                 raise ValueError('unsupported kernel type: either "geometric" '
                                  'or "exponential"')
+        """
         # initialize 
+        g1 = nx.Graph()
         n = len(A)
         nodes= np.arange(n)
         g1.add_nodes_from(nodes)
@@ -138,7 +141,7 @@ class RandomWalk6(Kernel):
                                     'graph or an iterable with at least 1 ' +
                                     'and at most 3 elements\n')
                 i += 1
-                out.append(self.add_input_(weight_mat))
+                out.append(weight_mat) #(self.add_input_(weight_mat))
 
             if i == 0:
                 raise ValueError('parsed input is empty')
