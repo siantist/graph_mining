@@ -190,4 +190,4 @@ class RandomWalk6(Kernel):
                 elif self.kernel_type == "exponential":
                     S = expm(self.lamda*XY).T
 
-            return np.sum(S)
+        return np.sum(S)
