@@ -8,6 +8,8 @@ transition matrix of pref rw is $pi_{i -> j}$ and weights is $\Omega_{ij}$
 
 The normalized kernel value between 2 graphs is $k (G_1, G_2) / \sqrt{ k(G_1, G_1) k (G_2, G_2)}$ 
 
+The normalize function is in https://github.com/ysig/GraKeL/blob/master/grakel/kernels/kernel.py
+
 The fit method extracts kernel dependent features from an input graph collection.
 
 The fit_transform method does the same job as fit, but also computes the kernel matrix emerging from the input graph collection.
