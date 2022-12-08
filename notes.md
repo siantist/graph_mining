@@ -4,6 +4,8 @@ beta =0 means normal random walk
 
 transition matrix of pref rw is $pi_{i -> j}$ and weights is $\Omega_{ij}$
 
+*Examine the weights of the edges within the kronecker product of the graphs.
+
 *grakel Documentation:*
 
 The normalized kernel value between 2 graphs is $k (G_1, G_2) / \sqrt{ k(G_1, G_1) k (G_2, G_2)}$ 
