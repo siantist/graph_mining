@@ -167,7 +167,7 @@ class RandomWalk6(Kernel):
             The kernel value.
         """
         print("pairwise operation")
-        if self.method_type == "baseline":
+        if self.kernel_type == "baseline":
             # calculate the product graph
             XY = np.kron(X, Y)
 
