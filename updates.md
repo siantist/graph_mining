@@ -2,7 +2,7 @@ To try out:
 - use av-2-deg of vertex as property in graph mining
 - translate vertex properties into edge properties
 - DNA sequences to word representable graphs ( read https://learngenomics.dev/docs/biological-foundations/cells-genomes-dna-chromosomes ) and then graph analysis
-
+- try doing the to do in https://github.com/siantist/graph_mining/blob/main/grakel/subgraph_specific_kernel.py
 
 To Do:
  - tu dataset , test with randomwalk3 or randomwalk4 
