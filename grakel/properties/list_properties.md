@@ -1,3 +1,11 @@
+ # graph properties
+ 
+ RDD: $\frac{1}{2} \sum_{u,v} \frac{deg_G(u) + deg_G(v)}{dist_G(u,v)}$
+
+Wiener index: $W(G) = \frac{1}{2} \sum_{u,v \in V} dist_G(u,v)$ 
+
+
+ 
  # vertex properties
  
  
