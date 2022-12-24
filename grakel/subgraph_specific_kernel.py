@@ -1,4 +1,6 @@
 
+# To do: try determining subgraphs based on topology ?
+
 import collections
 import warnings
 
