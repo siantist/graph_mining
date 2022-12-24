@@ -1,5 +1,5 @@
 
-# To do: try determining subgraphs based on topology ?
+# To do: try determining subgraphs based on topology ? https://download.arxiv.org/pdf/1011.1827v1
 
 import collections
 import warnings
