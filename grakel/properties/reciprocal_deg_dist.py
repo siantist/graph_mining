@@ -10,4 +10,4 @@ def reciprocal_deg_dist(G, shortest_path_matrix):
         ideg = sum(G[i])
         jdeg = sum(G[j])
         s= s+ (ideg+jdeg)/shortest_path_matrix[i,j]
-  return s 
+  return 0.5*s 
