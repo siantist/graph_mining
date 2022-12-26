@@ -22,3 +22,4 @@ https://github.com/Graphegon/pygraphblas
 https://github.com/python-graphblas/graphblas-algorithms/blob/main/graphblas_algorithms/algorithms/shortest_paths/generic.py
 
 https://github.com/python-graphblas
+https://github.com/python-graphblas/python-graphblas
