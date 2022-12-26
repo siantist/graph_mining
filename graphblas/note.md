@@ -15,3 +15,6 @@ Def. The $\epsilon$-determinant of $A$ is $det_{\epsilon}(A) = \sum_{\sigma \in 
 
 Thm 4:solution $X* = (A^- b) = (d^{-1} d_1, d^{-1} d_2, \cdots, d^{-1} d_n)^T$ 
 where $d = det_{eps}(A)$ and $d_j = det_{eps}(A_{[j]}), j \in [n]$. 
+
+links:
+https://github.com/Graphegon/pygraphblas
