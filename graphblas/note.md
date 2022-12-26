@@ -18,3 +18,7 @@ where $d = det_{eps}(A)$ and $d_j = det_{eps}(A_{[j]}), j \in [n]$.
 
 links:
 https://github.com/Graphegon/pygraphblas
+
+https://github.com/python-graphblas/graphblas-algorithms/blob/main/graphblas_algorithms/algorithms/shortest_paths/generic.py
+
+https://github.com/python-graphblas
