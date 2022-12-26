@@ -23,3 +23,5 @@ https://github.com/python-graphblas/graphblas-algorithms/blob/main/graphblas_alg
 
 https://github.com/python-graphblas
 https://github.com/python-graphblas/python-graphblas
+
+https://graphblas.org/docs/GraphBLAS_API_C_v2.0.0.pdf
