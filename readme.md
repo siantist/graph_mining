@@ -1,9 +1,10 @@
 In progress:
 
 - bipartite flow matching on kronecker product
+- fractional isomorphism as approximate graph isomorphism
 
 To try out:
-- neighborhood hash kernel within gnn ( https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_hash.html )
+- neighborhood hash kernel within gnn ( https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html )
 - use av-2-deg of vertex as property in graph mining
 - translate vertex properties into edge properties
 - DNA sequences to word representable graphs ( read https://learngenomics.dev/docs/biological-foundations/cells-genomes-dna-chromosomes ) and then graph analysis
