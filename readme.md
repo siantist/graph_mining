@@ -1,6 +1,6 @@
 In progress:
 
-- bipartite flow matching on kronecker product
+- bipartite flow matching on kronecker product -> compute the flows on the graphs where the flow is increased if the labels/some properties match -> maximize the flow (max flow)
 - fractional isomorphism as approximate graph isomorphism and compare it to https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html
 
 To try out:
