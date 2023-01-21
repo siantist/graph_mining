@@ -1,7 +1,7 @@
 In progress:
 
 - bipartite flow matching on kronecker product
-- fractional isomorphism as approximate graph isomorphism
+- fractional isomorphism as approximate graph isomorphism and compare it to https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html
 
 To try out:
 - neighborhood hash kernel within gnn ( https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html )
