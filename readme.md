@@ -4,6 +4,7 @@ In progress:
 - fractional isomorphism as approximate graph isomorphism and compare it to https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html
 
 To try out:
+- relate the graph immersion with Geom WL test (https://arxiv.org/pdf/2301.09308v1.pdf) 
 - create embedding of graph similar to pca (kernel pca? A survey on graph kernels)
 - neighborhood hash kernel within gnn ( https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html )
 - use av-2-deg of vertex as property in graph mining
