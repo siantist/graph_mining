@@ -4,6 +4,8 @@ In progress:
 - fractional isomorphism as approximate graph isomorphism and compare it to https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html
 
 To try out:
+- kernel function in GNN
+- learn embedding of graph based on cycle bases 
 - relate the graph immersion with Geom WL test (https://arxiv.org/pdf/2301.09308v1.pdf) 
 - create embedding of graph similar to pca (kernel pca? A survey on graph kernels); use angle differences of geometric spanner embedding of the graph
 - neighborhood hash kernel within gnn ( https://ysig.github.io/GraKeL/0.1a8/kernels/neighborhood_subgraph_pairwise_distance.html )
