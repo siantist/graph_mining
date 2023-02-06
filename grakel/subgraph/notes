@@ -1,0 +1,24 @@
+subgraph matching kernel
+
+link: https://github.com/ysig/GraKeL
+
+subgraph matching kernel : counts number of matchings btwn subgraphs of bounded size in 2 graphs
+ 
+ 
+idea: subgraph matching kernel for 
+ 
+A graph isomorphism is a bijection $\phi: V-> V'$ that preserves adjacencies or $u,v \in V: (v,u) \in E \leftrightarrow (\phi(v), \phi(u)) \in E'$
+
+and $\psi : V \times V \rightarrow V' \times V'$ is mapping of vertex pairs implied by the bijection $\phi$ s.t. $\psi ((v,u)) = (\phi(v), \phi(u))$ 
+
+ 
+Let $B(G,G')$ be the set of bijections between sets $S\subseteq V, S' \subseteq V'$ and $\lambda: B(G, G') \rightarrow R+$ be a weight function. The subgraph matching kernel is:
+
+$k(G, G') = \sum_{\phi \in B(G,G')} \lambda(\phi) \Pi_{v \in S} k_V(v, \phi(v)) \Pi_{e \in S \times S} k_E (e, \psi(e))$
+
+
+To count the number of isomorphisms between subgraphs, the kernel capitalizes on a classical result of Levi [Lev73] which makes a connection between common subgraphs of two graphs and cliques in their <b> product graph </b>. More specifically, each maximum clique in the product graph is associated with a maximum common subgraph of the factor graphs. This allows someone to compute the common subgraph isomorphism kernel by enumerating the cliques of the product graph.
+
+sm_kernel: returns
+tv_np : np.array
+        An array holding values for all clique sizes from 0 to k.
