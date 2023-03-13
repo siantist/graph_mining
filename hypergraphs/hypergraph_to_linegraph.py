@@ -1,4 +1,5 @@
 # topological simplification of hypergraphs
+import numpy as np
 def hypergraph_to_linegraph(vh, eh):
   # eh is array of arrays where vertices in each edge is an array
   # turn the edges into vertices 
@@ -15,7 +16,7 @@ def hypergraph_to_linegraph(vh, eh):
     for v2 in vline:
       vals1 = vline[v1]
       vals2 = vline[v2]
-      if len(vals1.intersection(vals2)) > 0:
+      if len(np.intersect1d(vals1, vals2)) > 0: #len(vals1.intersection(vals2)) > 0:
         eline.append([v1, v2])
       ind2 = ind2+1
    ind1 = ind1+1
