@@ -8,6 +8,8 @@ Ollivier-Ricci curvature is 1 - W(u,v)/d(u,v)
 W is earth mover distance
 
 https://github.com/saibalmars/GraphRicciCurvature
+
+https://github.com/saibalmars/GraphRicciCurvature/blob/master/GraphRicciCurvature/OllivierRicci.py
 """
 def curvature_distribution(G, m): # m is the distribution on nbd of nodes
   for edge in G.edges:
