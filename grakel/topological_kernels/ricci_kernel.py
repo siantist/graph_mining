@@ -6,6 +6,8 @@ graph topology and thereby works for settings when node attributes are not avail
 Ollivier-Ricci curvature is 1 - W(u,v)/d(u,v) 
 
 W is earth mover distance
+
+https://github.com/saibalmars/GraphRicciCurvature
 """
 def curvature_distribution(G):
   for edge in G.edges:
