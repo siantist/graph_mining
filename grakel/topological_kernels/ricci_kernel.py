@@ -5,4 +5,11 @@ graph topology and thereby works for settings when node attributes are not avail
 
 Ollivier-Ricci curvature is 1 - W(u,v)/d(u,v) 
 
+W is earth mover distance
 """
+def curvature_distribution(G):
+  for edge in G.edges:
+    # calculate W(u,v)
+    W(u,v) = # cost is shortest path dist of moving mass from u_i of u to v_j of v
+    # ricci curvature
+    rc = 1 - W(u,v)/d(u,v)
