@@ -26,6 +26,7 @@ def ricci_kernel(G1, G2):
   orc2.compute_ricci_curvature()
   c1 = orc1.G[0][1]["ricciCurvature"]
   c2 = orc2.G[0][1]["ricciCurvature"]
+  return np.exp(-np.pow(c1 - c2, 2)/(2*np.pow(sigma,2)))
   
 
 def curvature_distribution(G, m): # m is the distribution on nbd of nodes
