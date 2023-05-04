@@ -1,3 +1,5 @@
+May 2023
+
 gnn $\rightarrow$ node embeddings $\rightarrow$ graph kernels
 
 links
