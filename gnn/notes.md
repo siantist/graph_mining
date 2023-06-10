@@ -12,3 +12,7 @@ Idea: change laplacian with other kinds of Laplacians
 pg. 4:
 They solve for the vector that minimizes 
 $x^T L x = \sum_{(i,j) \in E} w_{ij}(x_i - x_j)^2$
+
+gnn -> node embedding -> graph kernel (node histogram) -> svm classification
+
+svm for topological classification?
