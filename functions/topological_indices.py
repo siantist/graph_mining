@@ -10,7 +10,7 @@ def zagreb_m1_index(degrees):
 def zagreb_m2_index(degrees, edges):
   s = 0
   for e in edges:
-    s = s+ degrees(e[0])*degrees(e[1])
+    s = s+ degrees[e[0]]*degrees[e[1]]
 
   return s
   #return sum( map(lambda (e1, e2): degrees[e1]*degrees[e2] , edges) )
