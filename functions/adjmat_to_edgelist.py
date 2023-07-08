@@ -11,9 +11,8 @@ def adjmat_to_edgelist(A):
       if pair1 not in elist:
         if pair2 not in elist:
           # do not append duplicates ?
-          if ind1 == ind2:
-            continue
-          elist.append(pair1)
+          if ind1 != ind2:
+            elist.append(pair1)
       ind2 = ind2 + 1
     ind1 = ind1+1
 
