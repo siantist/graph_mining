@@ -21,7 +21,7 @@ def connectivity_index(degrees, edges, power):
   if len(E) == 0: return 0
   s = 0
   for e in edges:
-    s = s + np.pow(degrees[e[0]]*degrees[e[1]], power)
+    s = s + pow(degrees[e[0]]*degrees[e[1]], power)
   return s
   #return np.float64(np.sum( map(lambda (e1 ,e2): ( degrees[e1]*degrees[e2] ) ** power , E) , dtype=np.longdouble))
 
@@ -32,7 +32,7 @@ def augmented_zagreb_index(edges, degrees):
     if len(E) < 2: return 0
     s = 0
     for e in edges:
-      s = s+ np.pow(degrees[e[0]]*degrees[e[1]] / (degrees[e[0]]+ degrees[e[1]]-2),3)
+      s = s+ pow(degrees[e[0]]*degrees[e[1]] / (degrees[e[0]]+ degrees[e[1]]-2),3)
     
     return s
     #return np.float64(np.sum( map(lambda (e1 ,e2): (np.longdouble(d[e1]*d[e2]) / (d[e1]+d[e2]-2)) **3, E) , dtype=np.longdouble))
