@@ -43,3 +43,10 @@ def eccentric_connectivity_index(degrees, eccentricity):
   if not self.is_connected(degrees, eccentricity):
       return False
   return sum( map( lambda a,b: a*b, degrees, eccentricity ) )
+
+def incidence_energy(mat):
+    """
+    Incidence energy is the sum of singular values of incidence matrix
+    """
+    from numpy.linalg import svd
+    return np.float64(np.sum(svd(mat, compute_uv=False), dtype=np.longdouble))
