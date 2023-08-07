@@ -50,3 +50,15 @@ def incidence_energy(mat):
     """
     from numpy.linalg import svd
     return np.float64(np.sum(svd(mat, compute_uv=False), dtype=np.longdouble))
+
+def molecular_topological_index(A, distance_matrix, degrees):
+  """ (Schultz) Molecular Topological Index (MTI)
+
+  The molecuar graph must be connected, otherwise the function Return False"""
+  if not self.is_connected():
+      return False
+  # (A+D)*d
+
+  #A = np.matrix(self.__A)
+  d = np.matrix(degrees)
+  return np.float64(( (A + distance_matrix) * d.T ).sum(dtype=np.longdouble))
