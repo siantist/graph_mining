@@ -32,6 +32,6 @@ def ricci_kernel(G1, G2):
 def curvature_distribution(G, m): # m is the distribution on nbd of nodes
   for edge in G.edges:
     # calculate W(u,v)
-    W(u,v) = # cost is shortest path dist of moving mass from u_i of u to v_j of v
+    #W(u,v) = # cost is shortest path dist of moving mass from u_i of u to v_j of v
     # ricci curvature
     rc = 1 - W(u,v)/d(u,v)
