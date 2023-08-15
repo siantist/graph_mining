@@ -28,7 +28,7 @@ def zagreb_m2_index_nodes(degrees, edges): # incidence list: the nodes connected
       n2 = node_map[e[1]]
       node_map[e[1]] = n2 + s
   
-  node_arr = node_map.values()
+  node_arr = list(node_map.values())
   return node_arr
 
 def connectivity_index_nodes(degrees, edges, power):
