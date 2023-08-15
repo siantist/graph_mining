@@ -31,6 +31,7 @@ def zagreb_m2_index_nodes(degrees, edges): # incidence list: the nodes connected
   node_arr = [] # list(node_map.values())
   for i in node_map.values():
     node_arr.append(i)
+  print("dif method")
   return node_arr
 
 def connectivity_index_nodes(degrees, edges, power):
