@@ -31,7 +31,7 @@ def zagreb_m2_index_nodes(degrees, edges): # incidence list: the nodes connected
   node_arr = [] # list(node_map.values())
   for i in node_map.values():
     node_arr.append(i)
-  print("dif method")
+  
   return node_arr
 
 def connectivity_index_nodes(degrees, edges, power):
@@ -55,7 +55,10 @@ def connectivity_index_nodes(degrees, edges, power):
     #node_map[e[0]] = n1 + s
     #node_map[e[1]] = n2 + s
   
-  node_arr = node_map.values()
+  #node_arr = node_map.values()
+  node_arr = [] # list(node_map.values())
+  for i in node_map.values():
+    node_arr.append(i)
   return node_arr
 
 def augmented_zagreb_index_nodes(edges, degrees):
@@ -80,7 +83,10 @@ def augmented_zagreb_index_nodes(edges, degrees):
         n2 = node_map[e[1]]
         node_map[e[1]] = n2 + s
 
-    node_arr = node_map.values()
+    #node_arr = node_map.values()
+    node_arr = [] # list(node_map.values())
+      for i in node_map.values():
+        node_arr.append(i)
     return node_arr
 
 def eccentric_connectivity_index_nodes(edges, degrees, eccentricity):
@@ -100,5 +106,8 @@ def eccentric_connectivity_index_nodes(edges, degrees, eccentricity):
     if node_map.get(e[1]) != None:
       n2 = node_map[e[1]]
       node_map[e[1]] = n2 + s
-  node_arr = node_map.values()
+  #node_arr = node_map.values()
+  node_arr = [] # list(node_map.values())
+    for i in node_map.values():
+      node_arr.append(i)
   return node_arr # return sum( map( lambda a,b: a*b, degrees, eccentricity ) )
