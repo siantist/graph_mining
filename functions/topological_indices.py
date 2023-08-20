@@ -40,8 +40,6 @@ def augmented_zagreb_index(edges, degrees):
 def eccentric_connectivity_index(degrees, eccentricity):
   """ Eccentric Connectivity Index
   The molecuar graph must be connected, otherwise the function Return False"""
-  if not self.is_connected(degrees, eccentricity):
-      return False
   return sum( map( lambda a,b: a*b, degrees, eccentricity ) )
 
 def incidence_energy(mat):
