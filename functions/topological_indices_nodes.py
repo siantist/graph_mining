@@ -87,7 +87,7 @@ def augmented_zagreb_index_nodes(edges, degrees):
     node_arr = [] # list(node_map.values())
     for i in node_map.values():
       node_arr.append(i)
-    return node_arr
+    return node_arr, node_map
 
 def eccentric_connectivity_index_nodes(edges, degrees, eccentricity):
   node_map = {}
