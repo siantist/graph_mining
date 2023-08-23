@@ -4,3 +4,4 @@ def first_zagreb_matrix(elist, amat):
     for j in range(n):
       if (i,j) in elist:
         zm[i,j] = deg(amat, i) + deg(amat,j)
+  return zm
