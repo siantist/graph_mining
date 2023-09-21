@@ -3,6 +3,8 @@ Directory:
 topological indices found at:
 graph_mining/functions/topological_indices_nodes.py
 
+albertson matrix, first zagreb matrix, etc: graph_mining/matrices/network_topology_matrices
+
 In progress:
 
 - bipartite flow matching on kronecker product -> compute the flows on the graphs where the flow is increased if the labels/some properties match -> maximize the flow (max flow)
