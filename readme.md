@@ -1,3 +1,8 @@
+Directory:
+
+topological indices found at:
+graph_mining/functions/topological_indices_nodes.py
+
 In progress:
 
 - bipartite flow matching on kronecker product -> compute the flows on the graphs where the flow is increased if the labels/some properties match -> maximize the flow (max flow)
