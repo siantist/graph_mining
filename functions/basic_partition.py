@@ -1,3 +1,4 @@
+import numpy as np
 # basic partition of given ordering of vertices
 def basic_partition(G, m): # m is number of sets
   n = len(G)
