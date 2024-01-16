@@ -17,6 +17,8 @@ def ed(X, Y, A): # adj matrix
   num= 0
   for i in X:
     for j in Y:
+      i = int(i)
+      j = int(j)
       Aij = A[i,j]
       if Aij ==1 and i!=j and i<j: # only count once
         num =num+1
