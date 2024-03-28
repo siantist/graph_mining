@@ -1,3 +1,4 @@
+import numpy as np
 def degree_matrix(A):
   degs = []
   for row in A:
