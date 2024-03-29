@@ -26,6 +26,7 @@ def albertson_matrix(elist, amat):
   return am
 
 def first_zagreb_matrix(elist, amat): 
+  n = len(amat)
   import numpy as np
   zm = np.zeros((n,n))
   for i in range(n):
