@@ -1,3 +1,5 @@
+from graph_mining.functions.topological_indices_nodes import zagreb_m1_index_nodes, zagreb_m2_index_nodes, connectivity_index_nodes, augmented_zagreb_index_nodes, eccentric_connectivity_index_nodes
+
 import numpy as np
 def degree_matrix(A):
   import numpy as np
