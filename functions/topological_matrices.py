@@ -22,7 +22,7 @@ def deg_sum_matrix(A):
   
 def connectivity_index_matrix(A, edges, power=2): # adjacency matrix
   import numpy as np
-  degrees = degree_matrix(A)
+  degrees = degrees_of_nodes(A)
   a = connectivity_index_nodes(degrees, edges, power)
   # create diagonal matrix 
   dm = np.diag(a)
